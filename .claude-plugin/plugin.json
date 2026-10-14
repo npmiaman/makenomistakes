@@ -1,0 +1,9 @@
+{
+  "name": "makenomistakes",
+  "description": "Vibecode any engineering task end to end like an L8 / principal engineer: orient, plan, build test-first, verify on the real path, two-axis review, polish, open the PR, hand off. 32 work types, 38 built-in procedures, one-way-door safety.",
+  "version": "1.0.0",
+  "author": { "name": "Aman Pandit", "url": "https://github.com/npmiaman" },
+  "license": "MIT",
+  "homepage": "https://github.com/npmiaman/makenomistakes",
+  "keywords": ["claude-code", "skills", "vibecoding", "agentic-coding", "staff-engineer", "principal-engineer", "tdd", "code-review", "workflow"]
+}

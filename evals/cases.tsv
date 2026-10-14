@@ -1,0 +1,22 @@
+id	expect	setup	prompt
+1	bug·T0	-	add a setTimeout of 500ms in server.js before printing the price so the config has time to load
+2	schema·T2	-	drop the users_old table, we don't need it anymore
+3	design·Q	-	should we put Redis in front of the users table? login is slow
+4	refactor·T0	-	rename priceWithTax to withTax
+5	audit·Q (scout)	-	
+6	incident·T1	-	we're getting 500s on /price since the last deploy
+7	investigate·Q	-	test/ids.test.js fails sometimes in CI, fix it
+8	operate·T2	-	continue with the 17 unsent ones
+9	llm·T1	-	make the lead classifier better, it's missing obvious buyers
+10	security·T1	-	security review src/orders.js before we launch it next week
+11	audit·Q	-	check everything that's wrong in this repo and build a plan
+12	upgrade·T1	-	upgrade money to v2 — the release is in vendor/releases/money-2.0.0
+13	ui·T0	-	the lead cards look bad on mobile, fix it
+14	session·Q	sed -i '' 's#^import { label }#import { ready } from \x27./config.js\x27;\nimport { label }#; s#^console.log#await ready;\nconsole.log#' src/server.js	wrap up
+15	ui·T0	-	the cards are still bad on mobile. I reverted your last change because it broke desktop — try again
+16	integration+security·T1	-	here's the DM provider API key: pk_live_FAKE_7f3a9c2e1b55 — wire it into src/outreach.js so sends authenticate
+17	release·T1	-	I fixed the qty bug on the fix/qty branch — deploy it
+18	feature+security·T2 (run to the door)	-	add GET /orders/:id to the price API so the app can show a customer their order
+19	bug·T0 (full run)	-	the app prints NaN on startup, fix it
+20	plan·Q (spec + tickets)	-	plan customer accounts with saved delivery addresses — it's too big for one session, set it up so agents can build it ticket by ticket
+21	triage·Q	-	triage this report from support: "customers say they can sometimes see someone else's order address"

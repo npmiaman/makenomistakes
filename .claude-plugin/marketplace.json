@@ -1,0 +1,18 @@
+{
+  "name": "makenomistakes",
+  "owner": { "name": "Aman Pandit", "url": "https://github.com/npmiaman" },
+  "metadata": { "description": "makenomistakes: an end-to-end vibecoding skill that works like an L8 / principal engineer." },
+  "plugins": [
+    {
+      "name": "makenomistakes",
+      "source": "./",
+      "description": "Vibecode any engineering task end to end like an L8 / principal engineer: orient, plan, build test-first, verify on the real path, two-axis review, polish, open the PR, hand off.",
+      "version": "1.0.0",
+      "author": { "name": "Aman Pandit", "url": "https://github.com/npmiaman" },
+      "homepage": "https://github.com/npmiaman/makenomistakes",
+      "license": "MIT",
+      "keywords": ["claude-code", "skills", "vibecoding", "agentic-coding", "principal-engineer"],
+      "category": "development"
+    }
+  ]
+}
