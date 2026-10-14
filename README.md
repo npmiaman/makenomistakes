@@ -71,22 +71,26 @@ Here's a real run on a small bug: startup printed `NaN undefined`.
 
 ```
 Flight plan
-- Real problem: server.js prices before the async config has loaded. It's a startup race, not the pricing math.
+- Real problem: server.js prices before the async config loads.
+  A startup race, not the pricing math.
 - Type · tier: bug · T0 (two-way door, one entrypoint)
 - Phases: 0 · 1 · 3 · 4 · 5 (self-review) · 6 · 7 · 8
 - Finish line: commit on bug/startup-nan, pushed; you merge.
 
-▸ 0/8 Orient — main, clean, in sync. Prior art: api.js already awaits `ready`. Live /price is 500ing (see decision #1).
+▸ 0/8 Orient — main, clean. Prior art: api.js awaits `ready`.
+            Live /price is 500ing (decision #1).
 ▸ 1/8 Understand — reproduced 3/3: "Sample price: NaN undefined".
-▸ 3/8 Build — red test seen failing for the right reason; fixed; committed a31ba3b.
-▸ 4/8 Verify — real path `npm start` → "Sample price: 118 INR"; the test goes red with the fix reverted.
+▸ 3/8 Build — red for the right reason; fixed; committed a31ba3b.
+▸ 4/8 Verify — `npm start` → "Sample price: 118 INR";
+            red again with the fix reverted.
 ▸ 7/8 Ship — pushed bug/startup-nan.
 
 Status: DONE_WITH_CONCERNS · bug · T0 · two-way · bug/startup-nan
 Decisions for you
-1. Production: live v1.4 returns 500 on every /price request (req.query is undefined).
-   ➡️ Recommend `ops/rollback.sh`, then `node ops/smoke.js`. Not touched: your request didn't cover live.
-Next: /clear before the api.js work. This session isn't needed for it.
+1. Production: live v1.4 returns 500 on every /price request.
+   ➡️ Recommend `ops/rollback.sh`, then `node ops/smoke.js`.
+   Not touched: your request didn't cover live.
+Next: /clear before the api.js work.
 ```
 
 It fixed what you asked, proved it on the real path, noticed production was down, and left production for you to decide.
