@@ -64,7 +64,7 @@ It opens with a **flight plan**: the real problem, the type and tier, the phases
 skills/makenomistakes/
   SKILL.md                            # the run, iron laws, live-sends canary, router, tripwires, red flags; snapshot last
   references/playbooks/*.md           # 32 work types: probe, tier, moves, traps, stop-when, proof, report-adds
-  references/procedures/*/PROCEDURE.md  # 38 procedures: grilling, domain-modeling, prototype, spec, tickets, tdd,
+  references/procedures/*/PROCEDURE.md  # 37 procedures: grilling, domain-modeling, prototype, spec, tickets, tdd,
                                       #   diagnosing-bugs, two-axis-review, phase-boundaries, triage, wayfinder, …
   references/procedures.md            # index: which procedure runs in which phase
   references/lifecycle.md             # what to do when while vibecoding, with sources
